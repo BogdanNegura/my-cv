@@ -1,0 +1,35 @@
+-
+    var myFullName = 'Bogdan Negura'
+    var myJobTitle = 'web developer'
+    var socialList = [
+        {
+            "icon": "facebook2",
+            "url": "https://www.facebook.com/negura.constantinbogdan/"
+        },
+        {
+            "icon": "github",
+            "url": "https://github.com/BogdanNegura/"
+        },
+        {
+            "icon": "linkedin2",
+            "url": "https://www.linkedin.com/in/bogdan-negura/"
+        },
+        {
+            "icon": "google-plus3",
+            "url": "https://plus.google.com/"
+        },
+        {
+            "icon": "instagram",
+            "url": "https://www.instagram.com/negura_bogdan/"
+        },
+    ]
+div#landing-page
+div.landing-page
+    .landing-page__wrapper
+        h1.landing-page__name=myFullName
+        h2.landing-page__title=myJobTitle
+        ul.landing-page__social
+            each social in socialList
+                li.landing-page__item
+                    label.landing-page__label(for="")
+                        span(class=`my-cv__icon--${social.icon}`)
