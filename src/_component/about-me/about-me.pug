@@ -1,0 +1,41 @@
+//- data come here
+-
+    var header = '#about me'
+    var imagePath = "asset/image/p.jpg"
+    var myFullName = "Bogdan Negura"
+    var myTitle = "web developer"
+    var slogan = `I make the front-end world a better place every dat.`
+    var achievement = {
+        title: 'achievement'
+        content: `I've built a custom SEO CMS That boosted search results position in Google's first place for tens of clients and their websites without any additional effort and minimum or no training`
+    }
+
+    var coolStuff = {
+        title: 'ttt',
+        buttonList: [
+            {
+                url:'https://github.com/BogdanNegura/my-cv',
+                icon:'github',
+                label:'Click to visit the Github project source'
+            }
+        ]
+    }
+//- the view comes here
+
+#about-me
+.about-me
+    .about-me__header=header
+    .about-me__avatar-wrapper
+        img.about-me__avatar(src=imagePath)
+    .about-me__full-name=myFullName
+    .about-me__full-title=myTitle
+    .about-me__slogan=slogan
+
+    .about-me__title=achievement.title
+    .about-me__content=achievement.content
+
+    each button in coolStuff.buttonList
+        a(href=button.url)=button.label
+            span=button.label
+            span(class=`.my-cv__icon--${button.icon}`)
+
