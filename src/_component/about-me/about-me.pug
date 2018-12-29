@@ -6,12 +6,12 @@
     var myTitle = "web developer"
     var slogan = `I make the front-end world a better place every dat.`
     var achievement = {
-        title: 'achievement'
+        title: 'achievement',
         content: `I've built a custom SEO CMS That boosted search results position in Google's first place for tens of clients and their websites without any additional effort and minimum or no training`
     }
 
     var coolStuff = {
-        title: 'ttt',
+        title: 'grab cool stuff',
         buttonList: [
             {
                 url:'https://github.com/BogdanNegura/my-cv',
@@ -34,8 +34,10 @@
     .about-me__title=achievement.title
     .about-me__content=achievement.content
 
-    each button in coolStuff.buttonList
-        a(href=button.url)=button.label
-            span=button.label
-            span(class=`.my-cv__icon--${button.icon}`)
+    .about-me__title=coolStuff.title
+    .about-me__link-list
+        each button in coolStuff.buttonList
+            a(href=button.url)=button.label
+                span=button.label
+                span(class=`.my-cv__icon--${button.icon}`)
 
